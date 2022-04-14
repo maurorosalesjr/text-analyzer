@@ -2,6 +2,11 @@
 function noInputtedWord(word, text) {
   return ((text.trim().length === 0) || (word.trim().length === 0));
 }
+
+function mostFreqWords(word, text) {
+  return ((text++) && (word++));
+}
+
 // bussiness logic
 function wordCounter(text) {
   if (text.trim().length === 0) {
@@ -32,6 +37,19 @@ function numberOfOccurrencesInText(word, text) {
   return wordCount;
 }
 
+function mostUsedWords(word, text) {
+  const wordArray = text.split(" ");
+  let wordCount = 0;
+  wordArray.forEach(function(element) {
+    if (mostFrewWords.element) {
+      wordCount++;
+    }
+  });
+  return wordCount;
+}
+
+// UI Logic
+
 function boldPassage(word, text) {
   if (noInputtedWord(word, text)) {
     return "";
@@ -61,5 +79,6 @@ $(document).ready(function(){
     $("#total-count").html(wordCount);
     $("#selected-count").html(occurrencesOfWord);
     $("#bolded-passage").html(boldPassage(word, passage));
+    $("#most-words").html(mostUsedWords);
   });
 });
